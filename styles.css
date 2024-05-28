@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(234, 234, 234);
   display: flex;
@@ -76,11 +80,32 @@ code {
 }
 
 .image {
-  width: 100%;
+  width: 70%;
+  margin-left: 20px;
 }
 
 footer {
   padding: 30px;
   text-align: center;
   color: #888;
+}
+
+@media only screen and (min-width: 825px) {
+  body {
+    flex-direction: row;
+  }
+
+  #navbar {
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    resize: horizontal;
+    overflow-x: scroll;
+  }
+
+  #main-doc {
+    margin: 0 20px;
+    margin-left: 350px;
+  }
+
 }
